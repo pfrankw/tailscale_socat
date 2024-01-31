@@ -6,7 +6,8 @@ services:
     environment:
       - SOCAT_DEST_HOST=destination_host
       - SOCAT_DEST_PORT=1234
-      - SOCAT_LISTEN_PORT=80
+      - SOCAT_LISTEN_PORT=80 # already defined as 80
+      - TS_PORT=41643 # already defined as 41643
     volumes:
       - ./tailscale:/var/lib/tailscale
 ...
