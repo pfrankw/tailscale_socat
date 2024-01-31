@@ -1,0 +1,12 @@
+services:
+...
+  tailscale:
+    build: ./tailscale_socat
+    restart: always
+    environment:
+      - SOCAT_DEST_HOST=destination_host
+      - SOCAT_DEST_PORT=1234
+      - SOCAT_LISTEN_PORT=80
+    volumes:
+      - ./tailscale:/var/lib/tailscale
+...
